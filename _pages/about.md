@@ -4,7 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Student at DNHS
+Graduating class of 2023
 
 
 
