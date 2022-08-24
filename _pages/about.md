@@ -3,9 +3,9 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-
-Student at DNHS
-Graduating class of 2023
+## about me
+1. Student at DNHS
+2. Graduating class of 2023
 
 
 
