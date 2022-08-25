@@ -51,7 +51,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "about me . Student at DNHS | Graduating class of 2023 | [^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats. .",
+          "content": "about me . Student at DNHS | Graduating class of 2023 | https://github.com/ahadb63/ahadsblog/blob/3ef4b827b63dd9ae977f0339d1e8d8011c891d02/images/plutomanga.jpg [^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats. .",
           "url": "https://ahadb63.github.io/ahadsblog/about/",
           "relUrl": "/about/",
           "date": ""
