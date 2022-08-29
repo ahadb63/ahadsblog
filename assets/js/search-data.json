@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "About Ahads Blog",
+            "title": "First Jupyter Notebook",
             "content": "print(1+1) print(&quot;hello&quot;) . . toc: True badges: True comments : True .",
             "url": "https://ahadb63.github.io/ahadsblog/2022/08/24/FirstJNotebook.html",
             "relUrl": "/2022/08/24/FirstJNotebook.html",
@@ -62,7 +62,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "about me . Student at DNHS | Graduating class of 2023 | [^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats. .",
+          "content": "about me . Student at DNHS | Graduating class of 2023 | .",
           "url": "https://ahadb63.github.io/ahadsblog/about/",
           "relUrl": "/about/",
           "date": ""
