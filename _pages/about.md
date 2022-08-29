@@ -8,4 +8,4 @@ permalink: /about/
 2. Graduating class of 2023
 
 
-![]({{site.baseurl}}/images/plutomanga.jpg "picture")
+![]({{site.baseurl}}/images/berserkpanel.jpg "picture")
