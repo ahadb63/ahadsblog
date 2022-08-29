@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "First Jupyter Notebook",
-            "content": "print(1+1) print(&quot;hello&quot;) . . toc: True badges: True comments : True .",
+            "content": ". toc: True badges: True . comments : True . print(1+1) print(&quot;hello&quot;) . . toc: True badges: True comments : True . : command not found toc:: command not found badges:: command not found comments: command not found : command not found . .",
             "url": "https://ahadb63.github.io/ahadsblog/2022/08/24/FirstJNotebook.html",
             "relUrl": "/2022/08/24/FirstJNotebook.html",
             "date": " • Aug 24, 2022"
