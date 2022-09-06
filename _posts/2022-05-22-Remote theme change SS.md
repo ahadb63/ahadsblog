@@ -1,6 +1,13 @@
+
+
 # Remote Theme Change
 
-![]({{site.baseurl}}/images/remotethemechange.jpg "remote theme change")
+Blog post showing what happened when I changed the Remote theme
 
-![]({{site.baseurl}}/images/themechange2.jpg "remote theme change 2")
+![]({{site.baseurl}}/images/remotethemechange.png "remotethemechange")
 
+Heres what it said
+
+![]({{site.baseurl}}/images/themechangefail.png "fail")
+
+![]({{site.baseurl}}/images/themechange2.png "page")
