@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -408,6 +408,84 @@ Ahad Biabani
 	 Birth Day: Sept 18
 	 Cars: None
 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a quiz stored in a list</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1">#number of quiz questions</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#initialize number of correct answers as 0 </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"This is a 4 question quiz"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Question: "</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span> <span class="c1">#asks user a question</span>
+    <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#takes user's input as variable msg </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Answer: "</span> <span class="o">+</span> <span class="n">user_input</span><span class="p">)</span> <span class="c1">#print user's input as Answer</span>
+    
+    <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="n">user_input</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span> <span class="c1">#convert user's input to lowercase</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct Answer"</span><span class="p">)</span>
+        <span class="k">global</span> <span class="n">correct</span> <span class="c1">#allows to modify variable outside of current scope </span>
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#add 1 to correct count</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">"Incorrect Answer"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">user_input</span> 
+
+<span class="n">question_1</span> <span class="o">=</span> <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"What is Ahads last name?"</span><span class="p">,</span> <span class="s2">"Biabani"</span><span class="p">)</span>
+<span class="n">question_2</span> <span class="o">=</span> <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"What sport does Ahad play"</span><span class="p">,</span> <span class="s2">"Ice Hockey"</span><span class="p">)</span>
+<span class="n">question_3</span> <span class="o">=</span> <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"How old is Ahad"</span><span class="p">,</span> <span class="s2">"16"</span><span class="p">)</span>
+<span class="n">question_4</span> <span class="o">=</span> <span class="n">question_and_answer</span><span class="p">(</span><span class="s2">"When is his birthday?"</span><span class="p">,</span> <span class="s2">"September 18th"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">correct</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'You scored </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s1"> correct answers out of 4, ur bad'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">correct</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'You scored </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s1"> correct answers out of 4, okay'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'You scored </span><span class="si">{</span><span class="n">correct</span><span class="si">}</span><span class="s1"> correct answers out of 4, good'</span><span class="p">)</span>
+
+<span class="n">Quiz</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"Q_1"</span><span class="p">:</span> <span class="n">question_1</span><span class="p">,</span>
+    <span class="s2">"Q_2"</span><span class="p">:</span> <span class="n">question_2</span><span class="p">,</span>
+    <span class="s2">"Q_3"</span><span class="p">:</span> <span class="n">question_3</span><span class="p">,</span>
+    <span class="s2">"Q_4"</span><span class="p">:</span> <span class="n">question_4</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"A record of your quiz:"</span><span class="p">,</span> <span class="n">Quiz</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is a 4 question quiz
+Question: What is Ahads last name?
 </pre>
 </div>
 </div>
