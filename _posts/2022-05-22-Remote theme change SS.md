@@ -4,7 +4,6 @@
 
 Blog post showing what happened when I changed the Remote theme
 
-![]({{site.baseurl}}/images/remotethemechange.png "remotethemechange")
 
 Heres what it said
 
