@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-title: Title
+title: JAVASCRIPT
 nb_path: _notebooks/2022-09-25-JavaScript Use.ipynb
 layout: notebook
 ---
@@ -17,7 +17,7 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 
-<pre><code># Console.log Output
+<pre><code># JAVASCRIPT
 
 - toc: true
 - badges: true
@@ -352,26 +352,23 @@ string ; {&#34;name&#34;:&#34;Ahad Biabani&#34;,&#34;ghID&#34;:&#34;Ahadb63&#34;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; [ Person {
-    name: &#39;Ahad Biabani&#39;,
-    ghID: &#39;Ahadb63&#39;,
-    classOf: 2024,
-    role: &#39;Teacher&#39; },
-  Person { name: &#39;Kian&#39;, ghID: &#39;Pasokhi&#39;, classOf: 2024, role: &#39;Student&#39; },
-  Person { name: &#39;Khalid&#39;, ghID: &#39;Farah&#39;, classOf: 2024, role: &#39;Student&#39; },
-  Person {
-    name: &#39;Neel&#39;,
-    ghID: &#39;Agnihotri&#39;,
-    classOf: 2024,
-    role: &#39;Student&#39; } ]
-string ; Ahad Biabani
-string ; {&#34;name&#34;:&#34;Ahad Biabani&#34;,&#34;ghID&#34;:&#34;Ahadb63&#34;,&#34;classOf&#34;:2024,&#34;role&#34;:&#34;Teacher&#34;}
-object ; { name: &#39;Ahad Biabani&#39;,
-  ghID: &#39;Ahadb63&#39;,
-  classOf: 2024,
-  role: &#39;Teacher&#39; }
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+evalmachine.&lt;anonymous&gt;:22
+compsci = new Classroom(teacher, students);
+                        ^
+
+ReferenceError: teacher is not defined
+    at evalmachine.&lt;anonymous&gt;:22:25
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.runInThisContext (vm.js:97:38)
+    at run ([eval]:1020:15)
+    at onRunRequest ([eval]:864:18)
+    at onMessage ([eval]:828:13)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:758:12)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)</pre>
 </div>
 </div>
 
