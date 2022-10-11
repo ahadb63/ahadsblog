@@ -168,7 +168,7 @@
     
         ,"post15": {
             "title": "Api",
-            "content": "Weather app . Unable to Fetch Weather No Information Available. Error Error Sunrise: No Information Available . Sunset: No Information Available . &lt;/body&gt; .",
+            "content": "&lt;!DOCTYPE html&gt; . Weather app . Unable to Fetch Weather No Information Available. Error Error Sunrise: No Information Available . Sunset: No Information Available . .",
             "url": "https://ahadb63.github.io/ahadsblog/2020/10/10/API.html",
             "relUrl": "/2020/10/10/API.html",
             "date": " • Oct 10, 2020"
