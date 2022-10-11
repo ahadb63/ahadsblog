@@ -168,7 +168,7 @@
     
         ,"post15": {
             "title": "Api",
-            "content": "Weather app . Unable to Fetch Weather No Information Available. Error Error Sunrise: No Information Available . Sunset: No Information Available . .",
+            "content": "Weather app . Unable to Fetch Weather No Information Available. Error Error Sunrise: No Information Available . Sunset: No Information Available . . { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: ‘Lora’, serif; } | . .container { height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; flex-direction: column; background: rgb(251, 242, 133); background: radial-gradient( circle, rgba(251, 242, 133, 0.6334908963585435) 0%, rgba(224, 196, 91, 0.8407738095238095) 35%, rgba(230, 224, 113, 1) 100% ); } .",
             "url": "https://ahadb63.github.io/ahadsblog/2020/10/10/API.html",
             "relUrl": "/2020/10/10/API.html",
             "date": " • Oct 10, 2020"
