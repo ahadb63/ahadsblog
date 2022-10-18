@@ -467,12 +467,10 @@ drink  $0.99
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total is $&quot;</span><span class="p">,</span> <span class="n">menu</span><span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()])</span>
             <span class="n">go</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="k">break</span>
-    
-    <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="n">k</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please Try Again&quot;</span><span class="p">)</span>
-        <span class="k">continue</span>
+        <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="n">k</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please Try Again&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
 <span class="c1">#code should add the price of the menu items selected by the user </span>
-<span class="n">Menu</span>
 </pre></div>
 
     </div>
@@ -489,24 +487,9 @@ drink  $0.99
 burger  $3.99
 fries  $1.99
 drink  $0.99
-Your Order: fries
-Your total is $ 1.99
+Your Order: burger
+Your total is $ 3.99
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2022-10-03-AP-error_testing.ipynb Cell 21</span> in <span class="ansi-cyan-fg">&lt;cell line: 25&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2022-10-03-AP-error_testing.ipynb#X32sdnNjb2RlLXJlbW90ZQ%3D%3D?line=22&#39;&gt;23&lt;/a&gt;</span>         continue
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2022-10-03-AP-error_testing.ipynb#X32sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span> #code should add the price of the menu items selected by the user 
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2022-10-03-AP-error_testing.ipynb#X32sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24&#39;&gt;25&lt;/a&gt;</span> Menu
-
-<span class="ansi-red-fg">NameError</span>: name &#39;Menu&#39; is not defined</pre>
 </div>
 </div>
 
@@ -562,10 +545,7 @@ Your total is $ 1.99
 burger $3.99
 fries $1.99
 drink $0.99
-Doesnt Exist
-Doesnt Exist
-Doesnt Exist
-Total: $3.99
+Total: $7.970000000000001
 </pre>
 </div>
 </div>
