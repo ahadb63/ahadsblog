@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>TETRIS | Ahads blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="TETRIS" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://ahadb63.github.io/ahadsblog/tetris/" />
+<meta property="og:url" content="https://ahadb63.github.io/ahadsblog/tetris/" />
+<meta property="og:site_name" content="Ahads blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TETRIS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"TETRIS","url":"https://ahadb63.github.io/ahadsblog/tetris/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ahadsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ahadb63.github.io/ahadsblog/feed.xml" title="Ahads blog" /><link rel="shortcut icon" type="image/x-icon" href="/ahadsblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ahadsblog/">Ahads blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ahadsblog/_pages/SUBMENU.html">Submenu</a><a class="page-link" href="/ahadsblog/about/">About Me</a><a class="page-link" href="/ahadsblog/search/">Search</a><a class="page-link" href="/ahadsblog/categories/">Tags</a><a class="page-link" href="/ahadsblog/tetris/">TETRIS</a><a class="page-link" href="/ahadsblog/Vocab/">Vocab and Notes</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Tetris HTML Game</title>
+  <meta charset="UTF-8">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  canvas {
+    border: 1px solid white;
+  }
+  </style>
+</head>
+<body>
+<canvas width="320" height="640" id="game"></canvas>
+<script>
+// https://tetris.fandom.com/wiki/Tetris_Guideline
+
+// get a random integer between the range of [min,max]
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// generate a new tetromino sequence
+// @see https://tetris.fandom.com/wiki/Random_Generator
+function generateSequence() {
+  const sequence = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
+
+  while (sequence.length) {
+    const rand = getRandomInt(0, sequence.length - 1);
+    const name = sequence.splice(rand, 1)[0];
+    tetrominoSequence.push(name);
+  }
+}
+
+// get the next tetromino in the sequence
+function getNextTetromino() {
+  if (tetrominoSequence.length === 0) {
+    generateSequence();
+  }
+
+  const name = tetrominoSequence.pop();
+  const matrix = tetrominos[name];
+
+  // I and O start centered, all others start in left-middle
+  const col = playfield[0].length / 2 - Math.ceil(matrix[0].length / 2);
+
+  // I starts on row 21 (-1), all others start on row 22 (-2)
+  const row = name === 'I' ? -1 : -2;
+
+  return {
+    name: name,      // name of the piece (L, O, etc.)
+    matrix: matrix,  // the current rotation matrix
+    row: row,        // current row (starts offscreen)
+    col: col         // current col
+  };
+}
+
+// rotate an NxN matrix 90deg
+// @see https://codereview.stackexchange.com/a/186834
+function rotate(matrix) {
+  const N = matrix.length - 1;
+  const result = matrix.map((row, i) =>
+    row.map((val, j) => matrix[N - j][i])
+  );
+
+  return result;
+}
+
+// check to see if the new matrix/row/col is valid
+function isValidMove(matrix, cellRow, cellCol) {
+  for (let row = 0; row < matrix.length; row++) {
+    for (let col = 0; col < matrix[row].length; col++) {
+      if (matrix[row][col] && (
+          // outside the game bounds
+          cellCol + col < 0 ||
+          cellCol + col >= playfield[0].length ||
+          cellRow + row >= playfield.length ||
+          // collides with another piece
+          playfield[cellRow + row][cellCol + col])
+        ) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+// place the tetromino on the playfield
+function placeTetromino() {
+  for (let row = 0; row < tetromino.matrix.length; row++) {
+    for (let col = 0; col < tetromino.matrix[row].length; col++) {
+      if (tetromino.matrix[row][col]) {
+
+        // game over if piece has any part offscreen
+        if (tetromino.row + row < 0) {
+          return showGameOver();
+        }
+
+        playfield[tetromino.row + row][tetromino.col + col] = tetromino.name;
+      }
+    }
+  }
+
+  // check for line clears starting from the bottom and working our way up
+  for (let row = playfield.length - 1; row >= 0; ) {
+    if (playfield[row].every(cell => !!cell)) {
+
+      // drop every row above this one
+      for (let r = row; r >= 0; r--) {
+        for (let c = 0; c < playfield[r].length; c++) {
+          playfield[r][c] = playfield[r-1][c];
+        }
+      }
+    }
+    else {
+      row--;
+    }
+  }
+
+  tetromino = getNextTetromino();
+}
+
+// show the game over screen
+function showGameOver() {
+  cancelAnimationFrame(rAF);
+  gameOver = true;
+
+  context.fillStyle = 'black';
+  context.globalAlpha = 0.75;
+  context.fillRect(0, canvas.height / 2 - 30, canvas.width, 60);
+
+  context.globalAlpha = 1;
+  context.fillStyle = 'white';
+  context.font = '36px monospace';
+  context.textAlign = 'center';
+  context.textBaseline = 'middle';
+  context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+}
+
+const canvas = document.getElementById('game');
+const context = canvas.getContext('2d');
+const grid = 32;
+const tetrominoSequence = [];
+
+// keep track of what is in every cell of the game using a 2d array
+// tetris playfield is 10x20, with a few rows offscreen
+const playfield = [];
+
+// populate the empty state
+for (let row = -2; row < 20; row++) {
+  playfield[row] = [];
+
+  for (let col = 0; col < 10; col++) {
+    playfield[row][col] = 0;
+  }
+}
+
+// how to draw each tetromino
+// @see https://tetris.fandom.com/wiki/SRS
+const tetrominos = {
+  'I': [
+    [0,0,0,0],
+    [1,1,1,1],
+    [0,0,0,0],
+    [0,0,0,0]
+  ],
+  'J': [
+    [1,0,0],
+    [1,1,1],
+    [0,0,0],
+  ],
+  'L': [
+    [0,0,1],
+    [1,1,1],
+    [0,0,0],
+  ],
+  'O': [
+    [1,1],
+    [1,1],
+  ],
+  'S': [
+    [0,1,1],
+    [1,1,0],
+    [0,0,0],
+  ],
+  'Z': [
+    [1,1,0],
+    [0,1,1],
+    [0,0,0],
+  ],
+  'T': [
+    [0,1,0],
+    [1,1,1],
+    [0,0,0],
+  ]
+};
+
+// color of each tetromino
+const colors = {
+  'I': 'cyan',
+  'O': 'yellow',
+  'T': 'purple',
+  'S': 'green',
+  'Z': 'red',
+  'J': 'blue',
+  'L': 'orange'
+};
+
+let count = 0;
+let tetromino = getNextTetromino();
+let rAF = null;  // keep track of the animation frame so we can cancel it
+let gameOver = false;
+
+// game loop
+function loop() {
+  rAF = requestAnimationFrame(loop);
+  context.clearRect(0,0,canvas.width,canvas.height);
+
+  // draw the playfield
+  for (let row = 0; row < 20; row++) {
+    for (let col = 0; col < 10; col++) {
+      if (playfield[row][col]) {
+        const name = playfield[row][col];
+        context.fillStyle = colors[name];
+
+        // drawing 1 px smaller than the grid creates a grid effect
+        context.fillRect(col * grid, row * grid, grid-1, grid-1);
+      }
+    }
+  }
+
+  // draw the active tetromino
+  if (tetromino) {
+
+    // tetromino falls every 35 frames
+    if (++count > 35) {
+      tetromino.row++;
+      count = 0;
+
+      // place piece if it runs into anything
+      if (!isValidMove(tetromino.matrix, tetromino.row, tetromino.col)) {
+        tetromino.row--;
+        placeTetromino();
+      }
+    }
+
+    context.fillStyle = colors[tetromino.name];
+
+    for (let row = 0; row < tetromino.matrix.length; row++) {
+      for (let col = 0; col < tetromino.matrix[row].length; col++) {
+        if (tetromino.matrix[row][col]) {
+
+          // drawing 1 px smaller than the grid creates a grid effect
+          context.fillRect((tetromino.col + col) * grid, (tetromino.row + row) * grid, grid-1, grid-1);
+        }
+      }
+    }
+  }
+}
+
+// listen to keyboard events to move the active tetromino
+document.addEventListener('keydown', function(e) {
+  if (gameOver) return;
+
+  // left and right arrow keys (move)
+  if (e.which === 37 || e.which === 39) {
+    const col = e.which === 37
+      ? tetromino.col - 1
+      : tetromino.col + 1;
+
+    if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+      tetromino.col = col;
+    }
+  }
+
+  // up arrow key (rotate)
+  if (e.which === 38) {
+    const matrix = rotate(tetromino.matrix);
+    if (isValidMove(matrix, tetromino.row, tetromino.col)) {
+      tetromino.matrix = matrix;
+    }
+  }
+
+  // down arrow key (drop)
+  if(e.which === 40) {
+    const row = tetromino.row + 1;
+
+    if (!isValidMove(tetromino.matrix, row, tetromino.col)) {
+      tetromino.row = row - 1;
+
+      placeTetromino();
+      return;
+    }
+
+    tetromino.row = row;
+  }
+});
+
+// start the game
+rAF = requestAnimationFrame(loop);
+</script>
+</body>
+</html>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ahadsblog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ahadsblog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ahadsblog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/ahadb63" target="_blank" title="ahadb63"><svg class="svg-icon grey"><use xlink:href="/ahadsblog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/ahadsblog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
