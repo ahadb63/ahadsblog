@@ -1,6 +1,6 @@
 ---
 keywords: fastai
-title: JAVASCRIPT
+title: JavaScript Usage
 nb_path: _notebooks/2022-09-25-JavaScript Use.ipynb
 layout: notebook
 ---
