@@ -1,6 +1,10 @@
 ---
 keywords: fastai
-title: Title
+title: Algorithm Hacks
+toc: true 
+badges: true
+comments: true
+categories: [Algorithm, Hacks]
 nb_path: _notebooks/2020-09-09-Algorithm Hacks.ipynb
 layout: notebook
 ---
@@ -21,136 +25,136 @@ layout: notebook
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
-	<span class="p">,</span><span class="nx">expressions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;! ( a || b || c )&#39;</span><span class="p">,</span> <span class="s1">&#39;(!a &amp;&amp; !b &amp;&amp; !c)&#39;</span><span class="p">];</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="nb">vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+	<span class="p">,</span><span class="n">expressions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;! ( a || b || c )&#39;</span><span class="p">,</span> <span class="s1">&#39;(!a &amp;&amp; !b &amp;&amp; !c)&#39;</span><span class="p">];</span>
 	
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;getResult&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()=&gt;{</span>
-	<span class="kd">var</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">vars</span><span class="p">.</span><span class="nx">length</span>
-		<span class="p">,</span><span class="nx">splitBy</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">len</span><span class="o">/</span><span class="mf">2</span><span class="p">)</span>
-		<span class="p">,</span><span class="nx">trueSet</span>
-		<span class="p">,</span><span class="nx">trues</span> <span class="o">=</span> <span class="p">[]</span>
-		<span class="p">,</span><span class="nx">falses</span> <span class="o">=</span> <span class="p">[]</span>
-		<span class="p">,</span><span class="nx">truthData</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;getResult&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span><span class="o">=&gt;</span><span class="p">{</span>
+	<span class="n">var</span> <span class="nb">len</span> <span class="o">=</span> <span class="nb">vars</span><span class="o">.</span><span class="n">length</span>
+		<span class="p">,</span><span class="n">splitBy</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="nb">len</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+		<span class="p">,</span><span class="n">trueSet</span>
+		<span class="p">,</span><span class="n">trues</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="p">,</span><span class="n">falses</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="p">,</span><span class="n">truthData</span> <span class="o">=</span> <span class="p">[];</span>
 	
-	<span class="nx">vars</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;vars&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
-	<span class="nx">expressions</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;expression&#39;</span><span class="p">).</span><span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+	<span class="nb">vars</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;vars&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
+	<span class="n">expressions</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;expression&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
 
 	
-	<span class="nx">truthData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">truth</span><span class="p">(</span><span class="nx">vars</span><span class="p">,</span> <span class="nx">vars</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
-	<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;=</span><span class="nx">splitBy</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">trueSet</span> <span class="o">=</span> <span class="nx">reduceToCombinations</span><span class="p">(</span><span class="nx">permut</span><span class="p">(</span><span class="nx">vars</span><span class="p">,</span> <span class="nx">i</span><span class="p">));</span>
+	<span class="n">truthData</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">truth</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span> <span class="nb">vars</span><span class="p">,</span> <span class="n">true</span><span class="p">));</span>
+	<span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">splitBy</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">trueSet</span> <span class="o">=</span> <span class="n">reduceToCombinations</span><span class="p">(</span><span class="n">permut</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span> <span class="n">i</span><span class="p">));</span>
 		
-		<span class="nx">trueSet</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">truthSrc</span><span class="p">)=&gt;{</span>
-			<span class="nx">trues</span> <span class="o">=</span> <span class="nx">truth</span><span class="p">(</span><span class="nx">vars</span><span class="p">,</span> <span class="nx">truthSrc</span><span class="p">);</span>
-			<span class="nx">truthData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">trues</span><span class="p">);</span>
+		<span class="n">trueSet</span><span class="o">.</span><span class="n">forEach</span><span class="p">((</span><span class="n">truthSrc</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+			<span class="n">trues</span> <span class="o">=</span> <span class="n">truth</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span> <span class="n">truthSrc</span><span class="p">);</span>
+			<span class="n">truthData</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">trues</span><span class="p">);</span>
 		<span class="p">});</span>
 		
 		
 	<span class="p">}</span>
-	<span class="nx">truthData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">truth</span><span class="p">(</span><span class="nx">vars</span><span class="p">,</span> <span class="nx">vars</span><span class="p">));</span>
+	<span class="n">truthData</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">truth</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span> <span class="nb">vars</span><span class="p">));</span>
 	
-	<span class="nx">writeTruthTable</span><span class="p">(</span><span class="nx">truthData</span><span class="p">);</span>
+	<span class="n">writeTruthTable</span><span class="p">(</span><span class="n">truthData</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="kd">function</span> <span class="nx">truth</span><span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">truths</span><span class="p">,</span> <span class="nx">reverse</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="n">function</span> <span class="n">truth</span><span class="p">(</span><span class="nb">set</span><span class="p">,</span> <span class="n">truths</span><span class="p">,</span> <span class="n">reverse</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">var</span> <span class="n">w</span> <span class="o">=</span> <span class="p">{};</span>
 	
-	<span class="nx">set</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">v</span><span class="p">=&gt;</span><span class="nx">w</span><span class="p">[</span><span class="nx">v</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="nx">truths</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span><span class="o">&gt;=</span><span class="mf">0</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span><span class="p">)</span><span class="o">^</span><span class="nx">reverse</span><span class="p">);</span>
+	<span class="nb">set</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">v</span><span class="o">=&gt;</span><span class="n">w</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">truths</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="err">?</span> <span class="n">true</span> <span class="p">:</span> <span class="n">false</span><span class="p">)</span><span class="o">^</span><span class="n">reverse</span><span class="p">);</span>
 	
-	<span class="k">return</span> <span class="nx">w</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">w</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">reduceToCombinations</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">1</span>
-		<span class="p">,</span><span class="nx">lastEl</span><span class="p">;</span>
+<span class="n">function</span> <span class="n">reduceToCombinations</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+		<span class="p">,</span><span class="n">lastEl</span><span class="p">;</span>
 
-	<span class="nx">arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">v</span><span class="p">=&gt;{</span><span class="k">return</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">sort</span><span class="p">().</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)}).</span><span class="nx">sort</span><span class="p">();</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">v</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)})</span><span class="o">.</span><span class="n">sort</span><span class="p">();</span>
 	
-	<span class="nx">lastEl</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-	<span class="k">while</span><span class="p">(</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">lastEl</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
+	<span class="n">lastEl</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+	<span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">arr</span><span class="o">.</span><span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">lastEl</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">arr</span><span class="o">.</span><span class="n">splice</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="nx">lastEl</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-			<span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+			<span class="n">lastEl</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+			<span class="n">i</span><span class="o">++</span><span class="p">;</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
 	
-	<span class="nx">arr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">v</span><span class="p">=&gt;{</span><span class="k">return</span> <span class="nx">v</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)});</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">v</span><span class="o">=&gt;</span><span class="p">{</span><span class="k">return</span> <span class="n">v</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)});</span>
 	
-	<span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">writeTruthTable</span><span class="p">(</span><span class="nx">truthData</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">table</span> <span class="o">=</span> <span class="s1">&#39;&lt;table cellpadding=0 cellspacing=0&gt;&#39;</span>
-		<span class="p">,</span><span class="nx">keys</span>
-		<span class="p">,</span><span class="nx">vals</span>
-		<span class="p">,</span><span class="nx">exprRes</span><span class="p">;</span>
+<span class="n">function</span> <span class="n">writeTruthTable</span><span class="p">(</span><span class="n">truthData</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">var</span> <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;&lt;table cellpadding=0 cellspacing=0&gt;&#39;</span>
+		<span class="p">,</span><span class="n">keys</span>
+		<span class="p">,</span><span class="n">vals</span>
+		<span class="p">,</span><span class="n">exprRes</span><span class="p">;</span>
 		
-	<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;thead&gt;&lt;tr&gt;&#39;</span><span class="p">;</span>
-	<span class="nx">vars</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">v</span><span class="p">=&gt;{</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;th&gt;&#39;</span><span class="p">;</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="nx">v</span><span class="p">;</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/th&gt;&#39;</span><span class="p">;</span>
+	<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;thead&gt;&lt;tr&gt;&#39;</span><span class="p">;</span>
+	<span class="nb">vars</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">v</span><span class="o">=&gt;</span><span class="p">{</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;th&gt;&#39;</span><span class="p">;</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="n">v</span><span class="p">;</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/th&gt;&#39;</span><span class="p">;</span>
 	<span class="p">});</span>
-	<span class="nx">expressions</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">v</span><span class="p">=&gt;{</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;th&gt;&#39;</span><span class="p">;</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="nx">v</span><span class="p">;</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/th&gt;&#39;</span><span class="p">;</span>
+	<span class="n">expressions</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">v</span><span class="o">=&gt;</span><span class="p">{</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;th&gt;&#39;</span><span class="p">;</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="n">v</span><span class="p">;</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/th&gt;&#39;</span><span class="p">;</span>
 	<span class="p">});</span>
-	<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/tr&gt;&lt;/thead&gt;&#39;</span><span class="p">;</span>
+	<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/tr&gt;&lt;/thead&gt;&#39;</span><span class="p">;</span>
 	
-	<span class="nx">truthData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">v</span><span class="p">)=&gt;</span> <span class="p">{</span>
-		<span class="nx">vals</span> <span class="o">=</span> <span class="p">[];</span>
-		<span class="nx">keys</span> <span class="o">=</span> <span class="p">[];</span>
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;tr&gt;&#39;</span><span class="p">;</span>
-		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">v</span><span class="p">);</span>
-		<span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">v</span><span class="p">){</span>
-			<span class="nx">vals</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">v</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-			<span class="nx">keys</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="nx">v</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
+	<span class="n">truthData</span><span class="o">.</span><span class="n">forEach</span><span class="p">((</span><span class="n">v</span><span class="p">)</span><span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="n">vals</span> <span class="o">=</span> <span class="p">[];</span>
+		<span class="n">keys</span> <span class="o">=</span> <span class="p">[];</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;tr&gt;&#39;</span><span class="p">;</span>
+		<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="n">v</span><span class="p">){</span>
+			<span class="n">vals</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+			<span class="n">keys</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;td&gt;&#39;</span><span class="p">;</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
 		<span class="p">};</span>
-		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">keys</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nb">eval</span><span class="p">(</span><span class="sb">`var </span><span class="si">${</span><span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="si">}</span><span class="sb"> = </span><span class="si">${</span><span class="nx">vals</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="si">}</span><span class="sb">;`</span><span class="p">);</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">keys</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nb">eval</span><span class="p">(</span><span class="err">`</span><span class="n">var</span> <span class="err">$</span><span class="p">{</span><span class="n">keys</span><span class="p">[</span><span class="n">i</span><span class="p">]}</span> <span class="o">=</span> <span class="err">$</span><span class="p">{</span><span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">]};</span><span class="err">`</span><span class="p">);</span>
 		<span class="p">}</span>
-		<span class="nx">expressions</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">expr</span><span class="p">)=&gt;{</span>
-			<span class="nx">exprRes</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nx">expr</span><span class="p">);</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="sb">`&lt;td class=&quot;</span><span class="si">${</span><span class="nx">exprRes</span><span class="si">}</span><span class="sb">&quot;&gt;`</span><span class="p">;</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="nx">exprRes</span> <span class="o">?</span> <span class="s1">&#39;T&#39;</span> <span class="o">:</span> <span class="s1">&#39;F&#39;</span><span class="p">;</span>
-			<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
+		<span class="n">expressions</span><span class="o">.</span><span class="n">forEach</span><span class="p">((</span><span class="n">expr</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+			<span class="n">exprRes</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">expr</span><span class="p">);</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="err">`</span><span class="o">&lt;</span><span class="n">td</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;$</span><span class="si">{exprRes}</span><span class="s2">&quot;</span><span class="o">&gt;</span><span class="err">`</span><span class="p">;</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="n">exprRes</span> <span class="err">?</span> <span class="s1">&#39;T&#39;</span> <span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">;</span>
+			<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/td&gt;&#39;</span><span class="p">;</span>
 		<span class="p">});</span>
 		
-		<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/tr&gt;&#39;</span><span class="p">;</span>
+		<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/tr&gt;&#39;</span><span class="p">;</span>
 	<span class="p">});</span>
 	
-	<span class="nx">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/table&gt;&#39;</span><span class="p">;</span>
+	<span class="n">table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/table&gt;&#39;</span><span class="p">;</span>
 	
-	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">table</span><span class="p">;</span>
+	<span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;result&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">table</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">permut</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
-	<span class="kd">var</span> <span class="nx">buf</span> <span class="o">=</span> <span class="p">[]</span>
-		<span class="p">,</span><span class="nx">len</span>
-		<span class="p">,</span><span class="nx">arrSlice</span>
-		<span class="p">,</span><span class="nx">permArr</span>
-		<span class="p">,</span><span class="nx">proArr</span><span class="p">;</span>
-	<span class="k">if</span><span class="p">(</span><span class="nx">c</span><span class="o">&lt;=</span><span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+<span class="n">function</span> <span class="n">permut</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">var</span> <span class="n">buf</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="p">,</span><span class="nb">len</span>
+		<span class="p">,</span><span class="n">arrSlice</span>
+		<span class="p">,</span><span class="n">permArr</span>
+		<span class="p">,</span><span class="n">proArr</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="o">&lt;=</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">arr</span><span class="p">;</span>
 	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-		<span class="nx">len</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">arrSlice</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="nx">i</span><span class="p">).</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">));</span>
-			<span class="nx">permArr</span> <span class="o">=</span> <span class="nx">permut</span><span class="p">(</span><span class="nx">arrSlice</span><span class="p">,</span><span class="nx">c</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
-			<span class="nx">proArr</span> <span class="o">=</span> <span class="p">[];</span>
-			<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">y</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span> <span class="nx">y</span><span class="o">&lt;</span><span class="nx">permArr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-				<span class="nx">proArr</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">permArr</span><span class="p">[</span><span class="nx">y</span><span class="p">]).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
+		<span class="nb">len</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">length</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">arrSlice</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+			<span class="n">permArr</span> <span class="o">=</span> <span class="n">permut</span><span class="p">(</span><span class="n">arrSlice</span><span class="p">,</span><span class="n">c</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+			<span class="n">proArr</span> <span class="o">=</span> <span class="p">[];</span>
+			<span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">permArr</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+				<span class="n">proArr</span><span class="o">.</span><span class="n">push</span><span class="p">([</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">permArr</span><span class="p">[</span><span class="n">y</span><span class="p">])</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>
 			<span class="p">}</span>
-			<span class="nx">buf</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">proArr</span><span class="p">);</span>
+			<span class="n">buf</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="o">...</span><span class="n">proArr</span><span class="p">);</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-	<span class="k">return</span> <span class="nx">buf</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">buf</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -180,6 +184,134 @@ ReferenceError: document is not defined
     at process.emit (events.js:191:7)
     at process.nextTick (internal/child_process.js:758:12)
     at _combinedTickCallback (internal/process/next_tick.js:73:7)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="n">A</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">const</span> <span class="n">B</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">const</span> <span class="n">C</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
+  <span class="p">}</span><span class="n">A</span><span class="p">()</span> <span class="o">||</span> <span class="n">B</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">C</span><span class="p">()</span>
+  <span class="o">//</span> <span class="n">prints</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">returns</span> <span class="n">true</span>
+  <span class="p">(</span><span class="n">A</span><span class="p">()</span> <span class="o">||</span> <span class="n">B</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="n">C</span><span class="p">()</span>
+  <span class="o">//</span> <span class="n">prints</span> <span class="s2">&quot;A C&quot;</span><span class="p">,</span> <span class="n">returns</span> <span class="n">false</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+evalmachine.&lt;anonymous&gt;:12
+  }A() || B() &amp;&amp; C()
+   ^
+
+SyntaxError: Unexpected identifier
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at run ([eval]:1020:15)
+    at onRunRequest ([eval]:864:18)
+    at onMessage ([eval]:828:13)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:758:12)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">bexp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Boolean expression: &#39;</span><span class="p">)</span>
+    <span class="n">bexp</span> <span class="o">=</span> <span class="n">bexp</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">bexp</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Thank you&quot;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="n">bexp</span><span class="p">,</span> <span class="s1">&#39;&lt;string&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;eval&#39;</span><span class="p">)</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="n">code</span><span class="o">.</span><span class="n">co_names</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">names</span><span class="p">),</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">bexp</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">),</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="nb">eval</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">env</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ : 1
+ : 1
+
+ : 2
+ : 2
+
+ : 3
+ : 3
+
+ : 1
+ : 1
+
+ : 1
+ : 1
+
+ : 1
+ : 1
+
+ : 1
+ : 1
+
+ : 2
+ : 2
+
+Thank you
+</pre>
 </div>
 </div>
 
