@@ -1,6 +1,11 @@
 ---
 keywords: fastai
-title: Title
+description: Python
+title: Python Test
+toc: true 
+badges: true
+comments: true
+categories: [kerneltest]
 nb_path: _notebooks/2020-02-02-kernelworking2.ipynb
 layout: notebook
 ---

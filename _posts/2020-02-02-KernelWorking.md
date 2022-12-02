@@ -1,6 +1,11 @@
 ---
 keywords: fastai
-title: Title
+description: Javascript
+title: Java Kernel Test
+toc: true 
+badges: true
+comments: true
+categories: [kerneltest]
 nb_path: _notebooks/2020-02-02-KernelWorking.ipynb
 layout: notebook
 ---
