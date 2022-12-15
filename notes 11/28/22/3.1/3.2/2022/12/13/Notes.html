@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Notes Week 14 | Ahads blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Notes Week 14" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://ahadb63.github.io/ahadsblog/notes%2011/28/22/3.1/3.2/2022/12/13/Notes.html" />
+<meta property="og:url" content="https://ahadb63.github.io/ahadsblog/notes%2011/28/22/3.1/3.2/2022/12/13/Notes.html" />
+<meta property="og:site_name" content="Ahads blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-13T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Notes Week 14" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T00:00:00-06:00","datePublished":"2022-12-13T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Notes Week 14","mainEntityOfPage":{"@type":"WebPage","@id":"https://ahadb63.github.io/ahadsblog/notes%2011/28/22/3.1/3.2/2022/12/13/Notes.html"},"url":"https://ahadb63.github.io/ahadsblog/notes%2011/28/22/3.1/3.2/2022/12/13/Notes.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ahadsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ahadb63.github.io/ahadsblog/feed.xml" title="Ahads blog" /><link rel="shortcut icon" type="image/x-icon" href="/ahadsblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ahadsblog/">Ahads blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ahadsblog/_pages/SUBMENU.html">Submenu</a><a class="page-link" href="/ahadsblog/about/">About Me</a><a class="page-link" href="/ahadsblog/search/">Search</a><a class="page-link" href="/ahadsblog/categories/">Tags</a><a class="page-link" href="/ahadsblog/tetris/">TETRIS</a><a class="page-link" href="/ahadsblog/Vocab/">Vocab and Notes</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Notes Week 14</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-13T00:00:00-06:00" itemprop="datePublished">
+        Dec 13, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/ahadsblog/categories/#notes 11/28/22">notes 11/28/22</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/ahadsblog/categories/#3.1">3.1</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/ahadsblog/categories/#3.2">3.2</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/ahadsblog/categories/#3.1">3.1</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/ahadsblog/categories/#3.2">3.2</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/ahadb63/ahadsblog/tree/master/_notebooks/202-09-09-Notes.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ahadsblog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/ahadb63/ahadsblog/master?filepath=_notebooks%2F202-09-09-Notes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ahadsblog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/ahadb63/ahadsblog/blob/master/_notebooks/202-09-09-Notes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ahadsblog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fahadb63%2Fahadsblog%2Fblob%2Fmaster%2F_notebooks%2F202-09-09-Notes.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ahadsblog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Grades">Grades </a></li>
+<li class="toc-entry toc-h1"><a href="#3.1-and-3.2">3.1 and 3.2 </a></li>
+<li class="toc-entry toc-h1"><a href="#3.3-and-3.4">3.3 and 3.4 </a></li>
+<li class="toc-entry toc-h1"><a href="#3.3-and-3.4-hacks">3.3 and 3.4 hacks </a></li>
+<li class="toc-entry toc-h1"><a href="#3.5-,-3.6-,-3.7-Notes-and-Problems">3.5 , 3.6 , 3.7 Notes and Problems </a></li>
+<li class="toc-entry toc-h1"><a href="#3.5---3.7-hacks">3.5 - 3.7 hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/202-09-09-Notes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Grades">
+<a class="anchor" href="#Grades" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grades<a class="anchor-link" href="#Grades"> </a>
+</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">3.1 &amp; 3.2</th>
+<th style="text-align:center">3.3 and 3.4</th>
+<th style="text-align:center">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0.95/1</td>
+<td style="text-align:center">1/1</td>
+<td style="text-align:center">1.95/2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.1-and-3.2">
+<a class="anchor" href="#3.1-and-3.2" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 and 3.2<a class="anchor-link" href="#3.1-and-3.2"> </a>
+</h1>
+<p>Variables</p>
+<ul>
+<li>Using meaningful variable names help with readability and help keep stuff organized</li>
+<li>be concisive with variables and thier names</li>
+</ul>
+<p>Integer</p>
+<ul>
+<li>numbers</li>
+</ul>
+<p>text/string</p>
+<ul>
+<li>words phrases</li>
+</ul>
+<p>Boolean</p>
+<ul>
+<li>True or False</li>
+</ul>
+<p>List of data can be stored in variable</p>
+<ul>
+<li>easily remove/add/change items into the list </li>
+<li>print/retrieve specific values in the list without creating a lot of variables</li>
+<li>help reduce need for new variables, simplifying the complexity</li>
+</ul>
+<p>Assignments</p>
+<ul>
+<li>assignment operator allows a program to change the value represented by a variable.</li>
+<li>assigns values to variables</li>
+<li>Different operators lile =, +=, /=, *=, etc are used to change value of a variable</li>
+</ul>
+<p>Data Abstraction</p>
+<ul>
+<li>Method used in coding to represent data in a useful form, by taking away aspects of data that aren't being used in the situation</li>
+<li>Variables and lists are primary tools in data abstraction</li>
+<li>data abstractions help manage complexity in  programs by giving a collection of data a name without refernecing the specific detailsof the representation.</li>
+</ul>
+<p>Lists and Strings</p>
+<ul>
+<li>list -&gt; ordered sequence of elements</li>
+<li>Element -&gt; individual value in a list that is assigned to a unique index</li>
+<li>Index -&gt;  a way to reference the elements in a list or string using natural numbers; each element of a string is referenced by an index</li>
+<li>String -&gt; ordered sequence of charachters (letters, numbers, special charachters.)</li>
+</ul>
+<p>Lists</p>
+<ul>
+<li>allow data abstraction</li>
+<li>bundles variables togther</li>
+<li>can keep adding elements</li>
+<li>can store elemetns as a single variable by using a list</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">QuestionsandAnswers</span><span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"#1 | What is the operator that displays only true or false?"</span><span class="p">:</span> <span class="s2">"boolean"</span><span class="p">,</span> 
+    <span class="s2">"#2 | What lessons were taught by students this week?"</span><span class="p">:</span> <span class="s2">"3.1-3.4"</span><span class="p">,</span> 
+    <span class="s2">"#3 | Who is the best teacher?"</span><span class="p">:</span> <span class="s2">"mr.mort"</span><span class="p">,</span> 
+    <span class="s2">"#4 | Why are variables important?"</span><span class="p">:</span> <span class="s2">"meaningful variable names help with readability and help keep stuff organized"</span><span class="p">,</span> 
+    <span class="s2">"#5 | What is a list in coding?"</span><span class="p">:</span> <span class="s2">"ordered sequence of elements"</span><span class="p">,</span> 
+<span class="p">}</span>
+<span class="k">def</span> <span class="nf">QuestionandResponse</span><span class="p">(</span><span class="n">Question</span><span class="p">):</span> <span class="c1"># display the question then return a response</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
+    <span class="n">Response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">Response</span>
+<span class="n">Correct</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="c1"># Setting up the start of the quiz</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of questions: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QuestionsandAnswers</span><span class="p">)))</span>
+
+<span class="c1"># Looks through code till desired answer</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">QuestionsandAnswers</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">QuestionandResponse</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>  <span class="c1">#answer input is saved to a variable</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">rsp</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1"># answer is case sensitive, so match response to lowercase for answer key to work</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">QuestionsandAnswers</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span> <span class="c1"># checks if answer is correct accoring to Questions and answers variale defined at the top.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Correct! --&gt; </span><span class="si">{</span><span class="n">rsp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>    
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>                           <span class="c1"># if else statement to print either correct or incorrect</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rsp</span><span class="si">}</span><span class="s2"> is super wrong"</span><span class="p">)</span> 
+
+<span class="n">percent</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">QandA</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># calculate percentage</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QandA</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"This is </span><span class="si">{</span><span class="n">percent</span><span class="si">}</span><span class="s2">%"</span><span class="p">)</span> <span class="c1"># print score and percentage</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">QuestionsandAnswers</span><span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"#1 | What is the operator that displays only true or false?"</span><span class="p">:</span> <span class="s2">"boolean"</span><span class="p">,</span> 
+    <span class="s2">"#2 | What lessons were taught by students this week?"</span><span class="p">:</span> <span class="s2">"3.1-3.4"</span><span class="p">,</span> 
+    <span class="s2">"#3 | Who is the best teacher?"</span><span class="p">:</span> <span class="s2">"mr.mort"</span><span class="p">,</span> 
+    <span class="s2">"#4 | Why are variables important?"</span><span class="p">:</span> <span class="s2">"meaningful variable names help with readability and help keep stuff organized"</span><span class="p">,</span> 
+    <span class="s2">"#5 | What is a list in coding?"</span><span class="p">:</span> <span class="s2">"ordered sequence of elements"</span><span class="p">,</span> 
+<span class="p">}</span>
+<span class="k">def</span> <span class="nf">QuestionandResponse</span><span class="p">(</span><span class="n">Question</span><span class="p">):</span> <span class="c1"># display the question then return a response</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">Question</span><span class="p">)</span>
+    <span class="n">Response</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">Response</span>
+<span class="n">Correct</span> <span class="o">=</span> <span class="mi">0</span> 
+
+<span class="c1"># Setting up the start of the quiz</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of questions: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QuestionsandAnswers</span><span class="p">)))</span>
+
+<span class="c1"># Looks through code till desired answer</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">QuestionsandAnswers</span><span class="p">:</span>
+    <span class="n">rsp</span> <span class="o">=</span> <span class="n">QuestionandResponse</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>  <span class="c1">#answer input is saved to a variable</span>
+    <span class="c1"># answer is case sensitive, so match response to lowercase for answer key to work</span>
+    <span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="n">QuestionsandAnswers</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span> <span class="c1"># checks if answer is correct accoring to Questions and answers variale defined at the top.</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Correct! --&gt; </span><span class="si">{</span><span class="n">rsp</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>    
+        <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>                           <span class="c1"># if else statement to print either correct or incorrect</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">rsp</span><span class="si">}</span><span class="s2"> is super wrong"</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"You scored "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QuestionsandAnswers</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">colorList</span><span class="o">=</span><span class="p">[</span><span class="s2">"green"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"Blue"</span><span class="p">]</span>
+<span class="n">colorlist2</span><span class="o">=</span><span class="p">[]</span>
+    
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">colorList</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.3-and-3.4">
+<a class="anchor" href="#3.3-and-3.4" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 and 3.4<a class="anchor-link" href="#3.3-and-3.4"> </a>
+</h1>
+<p>Algorithms can be represeted in different ways</p>
+<ul>
+<li>flow charts</li>
+</ul>
+<p>strings</p>
+<ul>
+<li>len() finds length</li>
+<li>lower() converts to lowercase</li>
+<li>concat() returns a string made up of the concatenated strings ex. concat("string1", "string2") would return string1string2</li>
+<li>substring() returns the characters from the string beginning at the at the first position to the last so an example of this would be substring ("abcdefghijk", 2, 5) would print bcde (pseudocode starts at 1)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.3-and-3.4-hacks">
+<a class="anchor" href="#3.3-and-3.4-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 and 3.4 hacks<a class="anchor-link" href="#3.3-and-3.4-hacks"> </a>
+</h1>
+<p>Variable hacks</p>
+<ul>
+<li>Problem 1 : 23.91</li>
+<li>Problem 2 : 1.25</li>
+<li>Problem 3 : 17</li>
+<li>Problem 4 : straightbrownshort</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Num1</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">Num2</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">15</span> <span class="c1"># 50 / 9  +15 = 20.5</span>
+<span class="n">Num3</span> <span class="o">=</span> <span class="n">Num2</span> <span class="o">/</span> <span class="n">Num1</span> <span class="o">+</span> <span class="p">(</span> <span class="n">Num2</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">)</span> <span class="c1">#  20.5/50 + (20.5 x 2) = 44.41</span>
+<span class="n">Num4</span> <span class="o">=</span> <span class="n">Num3</span> <span class="o">+</span> <span class="n">Num1</span> <span class="o">/</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">10</span> <span class="c1"># 44.41+50/5 -10</span>
+<span class="n">Result</span> <span class="o">=</span> <span class="n">Num4</span> <span class="o">-</span> <span class="n">Num2</span>
+
+<span class="n">RESULT</span> <span class="o">=</span> <span class="mf">23.91</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Num1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Num2</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="c1">#10/12 or 0.83</span>
+<span class="n">Num1</span> <span class="o">=</span> <span class="n">Num2</span> <span class="c1"># num 1 is now alos 0.83</span>
+<span class="n">Num3</span> <span class="o">=</span> <span class="n">Num1</span> <span class="o">*</span> <span class="mi">3</span> <span class="c1"># num 3 is 2.5</span>
+<span class="n">Result</span> <span class="o">=</span> <span class="n">Num3</span> <span class="o">%</span> <span class="mi">2</span> <span class="c1">#num 3 (2.5) becomes 1.25</span>
+
+<span class="n">Result</span> <span class="o">=</span> <span class="mf">1.25</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">valueA</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">valueB</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">valueC</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">valueB</span> <span class="o">=</span> <span class="n">valueC</span> <span class="o">-</span> <span class="n">valueA</span> <span class="c1"># 17 - 4</span>
+<span class="n">valueA</span> <span class="o">=</span> <span class="n">valueA</span> <span class="o">*</span> <span class="mi">10</span> <span class="c1"># 4 x 10</span>
+<span class="k">if</span> <span class="n">valueB</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span> <span class="c1"># b is bigger than 10</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">valueC</span><span class="p">)</span> <span class="c1"># c stays 17</span>
+
+<span class="n">Result</span> <span class="o">=</span> <span class="mi">17</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span> <span class="o">=</span> <span class="s2">"curly"</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s2">"brown"</span>
+<span class="n">length</span> <span class="o">=</span> <span class="s2">"short"</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="s2">"straight"</span>
+<span class="n">hair</span> <span class="o">=</span> <span class="nb">type</span> <span class="o">+</span> <span class="n">color</span> <span class="o">+</span> <span class="n">length</span> <span class="c1"># straight + brown + short</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hair</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>String hacks</p>
+<ul>
+<li>Problem 1: " Mr.Mortenson is very handsome.</li>
+<li>Problem 2: </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Noun</span> <span class="o">=</span> <span class="s2">"Mr.Mortenson"</span> 
+<span class="n">Adjective</span> <span class="o">=</span> <span class="s2">"handsome"</span> 
+<span class="n">Adjective2</span> <span class="o">=</span> <span class="s2">"Very"</span> 
+<span class="n">Verb</span> <span class="o">=</span> <span class="s2">"is"</span> 
+<span class="n">abrev</span> <span class="o">=</span> <span class="n">subtring</span><span class="p">(</span><span class="n">Noun</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> 
+<span class="n">yoda</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">Adjective2</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">Adjective</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">abrev</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span><span class="n">Verb</span><span class="p">,</span> <span class="s2">"."</span><span class="p">)</span> 
+<span class="n">display</span><span class="p">[</span><span class="n">yoda</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb Cell 13</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> Adjective2 = "Very" 
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> Verb = "is" 
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> abrev = subtring(Noun, 1, 7) 
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> yoda = concat(Adjective2, " ", Adjective, " ", abrev, " ",Verb, ".") 
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X15sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> display[yoda]
+
+<span class="ansi-red-fg">NameError</span>: name 'subtring' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cookie</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">"choclate"</span><span class="p">)</span> <span class="c1"># 8</span>
+<span class="n">cookie2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">"rasin"</span><span class="p">)</span>  <span class="c1"># 5</span>
+<span class="n">len1</span> <span class="o">=</span> <span class="n">cookie</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1"># 8/2 = 4</span>
+<span class="n">len2</span> <span class="o">=</span> <span class="n">cookie2</span> <span class="o">*</span> <span class="mi">45</span>  <span class="c1"># 5 x 45 = 225</span>
+<span class="n">vote1</span> <span class="o">=</span> <span class="p">(</span><span class="n">cookie</span><span class="p">,</span> <span class="s2">"vote"</span><span class="p">,</span> <span class="n">len2</span><span class="p">)</span>  <span class="c1"># 8, vote, 225</span>
+<span class="n">vote2</span> <span class="o">=</span> <span class="p">(</span><span class="n">cookie2</span><span class="p">,</span> <span class="s2">"vote"</span><span class="p">,</span> <span class="n">len1</span><span class="p">)</span> <span class="c1"># 5, vote, 4</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">vote1</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">vote2</span><span class="p">)</span>  <span class="c1">#8 vote 225 5 vote 4</span>
+<span class="n">display</span><span class="p">[</span><span class="n">votes</span><span class="p">]</span> <span class="c1"># 225 vote chocolate, 4 vote rasin</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb Cell 14</span> in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> vote1 = (cookie, "vote", len2)  # 8, vote, 225
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> vote2 = (cookie2, "vote", len1) # 5, vote, 4
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> votes = concat(vote1, " ", vote2)  #8 vote 225 5 vote 4
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/202-09-09-Notes.ipynb#X16sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> display[votes]
+
+<span class="ansi-red-fg">NameError</span>: name 'concat' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.5-,-3.6-,-3.7-Notes-and-Problems">
+<a class="anchor" href="#3.5-,-3.6-,-3.7-Notes-and-Problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.5 , 3.6 , 3.7 Notes and Problems<a class="anchor-link" href="#3.5-,-3.6-,-3.7-Notes-and-Problems"> </a>
+</h1>
+<ul>
+<li>Boolean: data type with two possible values (true or false)</li>
+<li>Selection(conditionals): uses a condition that evaluates to true or false<ul>
+<li>Selection determines which part of an algorithm are executed based on a condition being true or false</li>
+</ul>
+</li>
+<li>Algorithm is a finite set of instructions that accomplish a specific task </li>
+<li>Nested conditional statements consist of conditional statements within other conditional statements</li>
+<li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade1</span> <span class="o">=</span> <span class="mi">90</span>
+<span class="n">grade2</span> <span class="o">=</span> <span class="mi">65</span>
+<span class="n">grade3</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">grade4</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">grade5</span> <span class="o">=</span> <span class="mi">95</span>
+
+<span class="n">GradeAverage</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span> <span class="o">+</span> <span class="mi">65</span> <span class="o">+</span> <span class="mi">75</span> <span class="o">+</span> <span class="mi">60</span> <span class="o">+</span> <span class="mi">95</span><span class="p">)</span> <span class="o">/</span> <span class="mi">5</span>
+
+<span class="k">if</span> <span class="n">GradeAverage</span> <span class="o">&gt;</span> <span class="mi">80</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">GradeAverage</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"no"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"100 == 100:"</span><span class="p">,</span><span class="mi">100</span><span class="o">==</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello == Adios:"</span><span class="p">,</span><span class="s2">"greeting"</span><span class="o">==</span><span class="s2">"farewell"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello != Adios:"</span><span class="p">,</span><span class="s2">"greeting"</span><span class="o">!=</span><span class="s2">"farewell"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello == Hola:"</span><span class="p">,</span><span class="s2">"greeting"</span><span class="o">==</span><span class="s2">"greeting"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"5&gt;=4:"</span><span class="p">,</span> <span class="mi">5</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+
+<span class="c1"># Notice that relational operators can even work on lists!</span>
+<span class="c1"># For lists, the relational operator compares each respective component until an answer is derived</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"['a','b','c'] &gt; ['x','y','z']:"</span><span class="p">,</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">[</span><span class="s1">'x'</span><span class="p">,</span><span class="s1">'y'</span><span class="p">,</span><span class="s1">'z'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[1,2,3,5] &gt; [1,2,3,4]:"</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[1,2,3,5] &lt; [1,2,3,4]:"</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="o">&lt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"[1,2,3,5] == [1,2,3,4]:"</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"1 &gt; 2 or 5 &lt; 12:"</span><span class="p">,)</span> 
+<span class="c1"># Output TRUE  using OR ^</span>
+
+<span class="c1"># Output FALSE using NOT</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"24 &gt; 8:"</span><span class="p">,)</span> 
+
+<span class="c1"># Output FALSE using AND</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"10 &gt; 20:"</span><span class="p">,</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="ow">and</span> <span class="n">false</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is greater than y"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is not greater than y"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is greater than y"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"x is not greater than y"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num1</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+
+<span class="k">if</span> <span class="nb">sum</span> <span class="o">&gt;=</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"200"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Analyzing Code Walkthrough</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">score</span> <span class="o">=</span> <span class="mi">82</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"You got an A, congrats!"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">75</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Please come to retake up to a 90 next week at tutorial!"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"You have detention!"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+<span class="o">//</span><span class="n">will</span> <span class="nb">print</span> <span class="s1">'Please come to retake up to a 90 next week at tutorial!'</span> <span class="n">because</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mf">75.</span>
+
+<span class="o">//</span><span class="n">javascript</span> <span class="n">dont</span> <span class="n">work</span> <span class="n">on</span> <span class="n">python</span> <span class="n">base</span> <span class="n">kernel</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">protein</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">carbs</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="n">sugar</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">carbs</span> <span class="o">&gt;=</span> <span class="mi">55</span> <span class="o">||</span> <span class="n">protein</span> <span class="o">&lt;=</span> <span class="mi">20</span> <span class="o">||</span> <span class="n">sugar</span> <span class="o">&gt;=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Your lunch is too unhealthy, please pick a new one"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">carbs</span> <span class="o">&lt;</span> <span class="mi">35</span> <span class="o">||</span> <span class="n">protein</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="s2">"This lunch is alright but try to add some more carbs or protein"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> 
+    <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">sugar</span> <span class="o">&gt;=</span> <span class="mi">11</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="s2">"Looks great but lets see if we can cut down on sugar, we don't want diabetes!"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="p">(</span><span class="s2">"Amazing, you created a healthy lunch!!!"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>  <span class="o">//</span> <span class="n">will</span> <span class="nb">print</span> <span class="s2">"Looks great but lets see if we can cut down on sugar, we don't want diabetes!"</span>
+
+<span class="o">//</span><span class="n">javascript</span> <span class="n">dont</span> <span class="n">work</span> <span class="n">on</span> <span class="n">python</span> <span class="n">base</span> <span class="n">kernel</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Writing Nested Code Activity</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hours</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">hours</span> <span class="o">&lt;=</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"inexpierenced, 50k salary"</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">hours</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"expierenced, 150k salary"</span><span class="p">)</span>    
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Expierenced, 90k salary"</span><span class="p">)</span>    
+    <span class="p">}</span>
+<span class="p">}</span> <span class="o">//</span><span class="n">javascript</span> <span class="n">dont</span> <span class="n">work</span> <span class="n">on</span> <span class="n">python</span> <span class="n">base</span> <span class="n">kernel</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.5---3.7-hacks">
+<a class="anchor" href="#3.5---3.7-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.5 - 3.7 hacks<a class="anchor-link" href="#3.5---3.7-hacks"> </a>
+</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Write a program that fits these conditions using nested conditionals:</p>
+
+<pre><code>If the product is expired, print "this product is no good"
+If the cost is above 50 dollars, and the product isn't expired, print "this product is too expensive"
+If the cost is 25 dollars but under 50, and the product isn't expired, print "this is a regular product"
+If the cost is under 25 dollars, print "this is a cheap product"</code></pre>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">"expired"</span>
+<span class="n">product</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">cost</span> <span class="o">=</span> <span class="mi">70</span>
+
+
+<span class="k">if</span> <span class="p">(</span><span class="n">product</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">,</span> <span class="n">cost</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">):</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"This product good and not expensive"</span> <span class="p">);</span> 
+<span class="k">else</span><span class="p">:</span> 
+    <span class="k">if</span> <span class="p">(</span><span class="n">product</span> <span class="o">&gt;=</span> <span class="n">x</span><span class="p">,</span> <span class="n">cost</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Product is not good and expensive"</span><span class="p">);</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">product</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">,</span> <span class="n">cost</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"regular product"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"cheap product"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This product good and not expensive
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">x</span>
+
+<span class="c1"># Question One </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is 1 + 1"</span><span class="p">)</span>
+<span class="n">answer_1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"a)1 b)2 c)3 d)4:"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">answer_1</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"b"</span> <span class="ow">or</span> <span class="n">answer_1</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"2"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>   
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect, 1 + 1 is 2"</span><span class="p">)</span>
+
+<span class="c1"># Question Two</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is my name?"</span><span class="p">)</span>
+<span class="n">answer_2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"a)ahad b)akshat c)xeem d)josh:"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">answer_2</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"a"</span> <span class="ow">or</span> <span class="n">answer_2</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"ahad"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect, my name is Ahad"</span><span class="p">)</span>
+
+<span class="c1"># Question Three</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"True or False Ahad is 17"</span><span class="p">)</span>
+<span class="n">answer_3</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">":"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">answer_3</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"true"</span> <span class="ow">or</span> <span class="n">answer_3</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"T"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct"</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Incorrect"</span><span class="p">)</span>  
+
+
+<span class="c1">#Total Score</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="s2">"out of 3, that is"</span><span class="p">,</span><span class="n">score</span><span class="p">,</span> <span class="s2">"%"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is 1 + 1
+Correct
+What is my name?
+Correct
+True or False Ahad is 17
+Incorrect
+2 out of 3, that is 66.66666666666666 %
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ahadb63/ahadsblog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/ahadsblog/notes%2011/28/22/3.1/3.2/2022/12/13/Notes.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ahadsblog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ahadsblog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ahadsblog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
