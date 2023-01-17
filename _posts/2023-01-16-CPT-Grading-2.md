@@ -44,6 +44,7 @@ layout: notebook
 <p><a href="https://drive.google.com/file/d/1HXDauimq8edpT0-aZ2iIujzLdIxtyKMx/view">College Board Rubric</a></p>
 <p>Reflection: This time my score and college boards score were a little off. I may have not analyzed the submissin correctly in accordance to the rubric therefor ending up giving the submission more points than it deserves.</p>
 <hr>
+<h3 id="takeaway">takeaway<a class="anchor-link" href="#takeaway"> </a></h3><p>Using both CPT grading 1 and 2, I am able to take away lots of information from the submissions. I now know what to do and what not do. Looking at succesful CPT projects has enabled me to take ideas and implement them into my own project for a full score.</p>
 
 </div>
 </div>
