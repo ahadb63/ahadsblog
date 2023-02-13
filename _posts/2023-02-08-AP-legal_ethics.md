@@ -56,5 +56,20 @@ Creative Commons, Open Source are free terminologies!  However, businesses will 
 
 # Blog Post Reflection
 1. When you create a GitHub repository it requests a license type.  Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
+
+ - Given many different options for license types,
+    - GNU GPL v3.0
+    - MIT License
+    - Apache License 2.0 
+    - GNU GPL v2.0. 
+    All these licenses call for your repository to remain an open source of code, which different requirements for people using your code. MIT License will be the most common license for this class, as it allows you to do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
+
 2. In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+ - Licensing and the legal aspect of it is much more detailed and complicated than i thought it was.
+ - I think licences and digital rights is a great things and its good that there are protective laws so that people follow proper procedure and dont steal content/ideas.
+ - Digital rights and licences serve great importance because they allow for interation between creators and comsumers in places liek socail media and media apps.
+
+
 3. Make a license for your personal (blog) and Team repositories for the CPT project.  Be sure to have a license for both Team GitHub repositories (frontend/backend).  Document license(s) you picked and why.  FYI, frontend, since it is built on GitHub pages may come with a license and restrictions.  Document in blog how team made license choice and process of update.
+
+- For our group frontend repo, we have a MIT License because we want to let anyone use our code, just give credit to us and acknowledge the license. Same for our backend repo as well. In order to update or add a license, we needed to create a file called LICENSE and use the MIT License template in GitHub. We entered the copyright year as 2023 under the name TripleAJ. Both repos are now licensed with an MIT License.

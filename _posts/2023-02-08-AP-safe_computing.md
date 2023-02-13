@@ -38,9 +38,28 @@ As we create a Web Site and post information we are adding to the Searchable PII
 * After a Virus or being compromised by Phishing it is advised to review all of you PII vulnerabilities.
 
 ## Blog Post Reflection:
-1. Describe PII you have seen on project in CompSci Principles.   
+1. Describe PII you have seen on project in CompSci Principles.  
+
+- When signing up for GitHub I used google. ThIs mean github has access to all the PII stored inside of my google account. Our own porject will be taking user PII in the form of thier full name. 
+
 1. What are your feelings about PII and your personal exposure?
+
+- I think that some people share wayyy to much online and it ends up hurting them in the long run with things like jobs. Ive always kept my online small (compared to others) because of the fear of getting into trouble, or not finding a job later, etc.
+
 1. Describe good and bad passwords?  What is another step that is used to assist in authentication.
+
+- Bad paswords are things that can be easily found out like your name, bday, fav number etc. A good number looks like a combinations of symbols, numbers and charachters that are randomized.
+
 1. Try to describe Symmetric and Asymmetric encryption.  
+
+- Symmetric encryption is an encryption method where the same secret key is used for both encryption and decryption of data. It means that both the sender and the receiver must have the same key to encrypt and decrypt the data. 
+
+- Asymmetric encryption is an encryption method where different keys are used for encryption and decryption. The sender uses the receiver's public key to encrypt the data, and the receiver uses their private key to decrypt the data. The public key can be freely shared and is used for encryption, while the private key must be kept secret and is used for decryption.
+
+
 1. Provide an example of encryption we used in AWS deployment.
+
+- 
+
 1. Describe a phishing scheme you have learned about ***the hard way***.  Describe some other phishing techniques.
+- Sometimes when you click links such as a discord login, it is a fake discord website and they hack you. Fake sites or email address like google.com compared to goggle.com. They create fake logim pages and steal your info
