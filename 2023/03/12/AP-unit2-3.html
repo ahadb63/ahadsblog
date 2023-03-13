@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      17 min read
     
 </span></p>
 
@@ -1126,6 +1126,85 @@ period 4    Csp      A+
 <pre>       food Games
 Day    good   yes
 Night  good   yes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/vscode/ahadsblog/_notebooks/files/AwardsPlayers.csv'</span><span class="p">)</span>
+
+<span class="n">nhl_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="n">player_data</span><span class="p">[</span><span class="s1">'award'</span><span class="p">]</span><span class="o">==</span><span class="s1">'hart'</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nhl_data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Empty DataFrame
+Columns: [playerID, award, year, lgID, note, pos]
+Index: []
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+ 
+<span class="c1"># creating a data frame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"/vscode/ahadsblog/_notebooks/files/AwardsPlayers.csv"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    playerID     award  year lgID note  pos
+0  malonjo01  Art Ross  1917  NHL  NaN  NaN
+1  cleghod01  Art Ross  1918  NHL  NaN  NaN
+2  malonjo01  Art Ross  1919  NHL  NaN  NaN
+3  lalonne01  Art Ross  1920  NHL  NaN  NaN
+4  broadpu01  Art Ross  1921  NHL  NaN  NaN
 </pre>
 </div>
 </div>
