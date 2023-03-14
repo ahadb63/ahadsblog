@@ -1147,7 +1147,7 @@ Night  good   yes
 
 <span class="n">player_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/vscode/ahadsblog/_notebooks/files/AwardsPlayers.csv'</span><span class="p">)</span>
 
-<span class="n">nhl_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="n">player_data</span><span class="p">[</span><span class="s1">'award'</span><span class="p">]</span><span class="o">==</span><span class="s1">'hart'</span><span class="p">]</span>
+<span class="n">nhl_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="n">player_data</span><span class="p">[</span><span class="s1">'award'</span><span class="p">]</span><span class="o">==</span><span class="s1">'Hart'</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nhl_data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
@@ -1162,9 +1162,12 @@ Night  good   yes
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Empty DataFrame
-Columns: [playerID, award, year, lgID, note, pos]
-Index: []
+<pre>     playerID award  year lgID note  pos
+7   nighbfr01  Hart  1923  NHL  NaN  NaN
+9   burchbi01  Hart  1924  NHL  NaN  NaN
+12  stewane01  Hart  1925  NHL  NaN  NaN
+15  gardihe01  Hart  1926  NHL  NaN  NaN
+19  morenho01  Hart  1927  NHL  NaN  NaN
 </pre>
 </div>
 </div>
