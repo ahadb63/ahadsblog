@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | Ahads blog</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://ahadb63.github.io/ahadsblog/2023/03/30/HashMap-Hacks.html" />
+<meta property="og:url" content="https://ahadb63.github.io/ahadsblog/2023/03/30/HashMap-Hacks.html" />
+<meta property="og:site_name" content="Ahads blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-30T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-30T00:00:00-05:00","datePublished":"2023-03-30T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://ahadb63.github.io/ahadsblog/2023/03/30/HashMap-Hacks.html"},"url":"https://ahadb63.github.io/ahadsblog/2023/03/30/HashMap-Hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ahadsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ahadb63.github.io/ahadsblog/feed.xml" title="Ahads blog" /><link rel="shortcut icon" type="image/x-icon" href="/ahadsblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ahadsblog/">Ahads blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ahadsblog/_pages/SUBMENU.html">Submenu</a><a class="page-link" href="/ahadsblog/about/">About Me</a><a class="page-link" href="/ahadsblog/search/">Search</a><a class="page-link" href="/ahadsblog/categories/">Tags</a><a class="page-link" href="/ahadsblog/tetris/">TETRIS</a><a class="page-link" href="/ahadsblog/Vocab/">Vocab and Notes</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-30T00:00:00-05:00" itemprop="datePublished">
+        Mar 30, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/ahadb63/ahadsblog/tree/master/_notebooks/2023-03-30-HashMap Hacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/ahadsblog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/ahadb63/ahadsblog/master?filepath=_notebooks%2F2023-03-30-HashMap+Hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ahadsblog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/ahadb63/ahadsblog/blob/master/_notebooks/2023-03-30-HashMap Hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/ahadsblog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fahadb63%2Fahadsblog%2Fblob%2Fmaster%2F_notebooks%2F2023-03-30-HashMap+Hacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/ahadsblog/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-30-HashMap Hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span> <span class="c1">#import library</span>
+
+<span class="n">nhl_teams</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;League&quot;</span><span class="p">:</span> <span class="s2">&quot;NHL&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;North America&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;current season&quot;</span><span class="p">:</span> <span class="s1">&#39;2022-2023&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;teams&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Boston Bruins&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Chicago Blackhawks&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Toronto Maple Leafs&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Los Angeles Kings&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Edmonton Oliers&quot;</span><span class="p">,</span>
+        
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;League&#39;: &#39;NHL&#39;,
+ &#39;country&#39;: &#39;North America&#39;,
+ &#39;current season&#39;: &#39;2022-2023&#39;,
+ &#39;teams&#39;: {1: &#39;Boston Bruins&#39;,
+           2: &#39;Chicago Blackhawks&#39;,
+           3: &#39;Toronto Maple Leafs&#39;,
+           4: &#39;Los Angeles Kings&#39;,
+           5: &#39;Edmonton Oliers&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;teams&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: &#39;Boston Bruins&#39;,
+ 2: &#39;Chicago Blackhawks&#39;,
+ 3: &#39;Toronto Maple Leafs&#39;,
+ 4: &#39;Los Angeles Kings&#39;,
+ 5: &#39;Edmonton Oliers&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;League&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#39;NHL&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nhl_teams</span><span class="p">[</span><span class="s2">&quot;Best Players&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">([</span><span class="s1">&#39;David Pastarnak&#39;</span><span class="p">,</span> <span class="s1">&#39;Conner Mcdavid&#39;</span><span class="p">,</span> <span class="s1">&#39;Auston Mattphews&#39;</span><span class="p">,</span> <span class="s1">&#39;David Pastarnak&#39;</span><span class="p">,</span> <span class="s1">&#39;Linus Ullmark&#39;</span><span class="p">,</span> <span class="s1">&#39;Alex Ovechkin&#39;</span><span class="p">])</span>
+<span class="c1"># What can you change to make sure there are no duplicate players?</span>
+
+<span class="c1"># Take out a duplicate</span>
+<span class="c1"># Make it into a set</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Best Players&#39;: [&#39;David Pastarnak&#39;,
+                  &#39;Conner Mcdavid&#39;,
+                  &#39;Auston Mattphews&#39;,
+                  &#39;David Pastarnak&#39;,
+                  &#39;Linus Ullmark&#39;,
+                  &#39;Alex Ovechkin&#39;],
+ &#39;League&#39;: &#39;NHL&#39;,
+ &#39;country&#39;: &#39;North America&#39;,
+ &#39;current season&#39;: &#39;2022-2023&#39;,
+ &#39;teams&#39;: {1: &#39;Boston Bruins&#39;,
+           2: &#39;Chicago Blackhawks&#39;,
+           3: &#39;Toronto Maple Leafs&#39;,
+           4: &#39;Los Angeles Kings&#39;,
+           5: &#39;Edmonton Oliers&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># removing duplicate elements from the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original List: &quot;</span><span class="p">,</span> <span class="n">nhl_teams</span><span class="p">[</span><span class="s1">&#39;Best Players&#39;</span><span class="p">])</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="nb">set</span><span class="p">(</span><span class="n">nhl_teams</span><span class="p">[</span><span class="s1">&#39;Best Players&#39;</span><span class="p">])]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List after removing duplicate elements: &quot;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original List:  [&#39;David Pastarnak&#39;, &#39;Conner Mcdavid&#39;, &#39;Auston Mattphews&#39;, &#39;David Pastarnak&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;]
+List after removing duplicate elements:  [&#39;Conner Mcdavid&#39;, &#39;Auston Mattphews&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;, &#39;David Pastarnak&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nhl_teams</span><span class="p">[</span><span class="s2">&quot;teams&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">6</span><span class="p">:</span><span class="s2">&quot;New York Rangers&quot;</span><span class="p">})</span>
+
+<span class="c1"># How would add an additional team </span>
+<span class="c1"># use .update</span>
+<span class="c1">#  filter to teams, add new number key they type team name</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Best Players&#39;: [&#39;David Pastarnak&#39;,
+                  &#39;Conner Mcdavid&#39;,
+                  &#39;Auston Mattphews&#39;,
+                  &#39;David Pastarnak&#39;,
+                  &#39;Linus Ullmark&#39;,
+                  &#39;Alex Ovechkin&#39;],
+ &#39;League&#39;: &#39;NHL&#39;,
+ &#39;country&#39;: &#39;North America&#39;,
+ &#39;current season&#39;: &#39;2022-2023&#39;,
+ &#39;teams&#39;: {1: &#39;Boston Bruins&#39;,
+           2: &#39;Chicago Blackhawks&#39;,
+           3: &#39;Toronto Maple Leafs&#39;,
+           4: &#39;Los Angeles Kings&#39;,
+           5: &#39;Edmonton Oliers&#39;,
+           6: &#39;New York Rangers&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">nhl_teams</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="c1"># Write your own code to print tracks in readable format</span>
+
+<span class="c1"># use pprint library</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>League: NHL
+country: North America
+current season: 2022-2023
+teams: {1: &#39;Boston Bruins&#39;, 2: &#39;Chicago Blackhawks&#39;, 3: &#39;Toronto Maple Leafs&#39;, 4: &#39;Los Angeles Kings&#39;, 5: &#39;Edmonton Oliers&#39;, 6: &#39;New York Rangers&#39;}
+Best Players: [&#39;David Pastarnak&#39;, &#39;Conner Mcdavid&#39;, &#39;Auston Mattphews&#39;, &#39;David Pastarnak&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to know about the NHL? </span><span class="se">\n</span><span class="s2"> For teams type --&gt; Teams&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Search&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="n">search</span><span class="p">()</span>
+
+<span class="c1">#</span>
+<span class="c1">#</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 9&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     else:
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         pprint.pprint(nhl_teams.get(search.lower()))
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> search()
+
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt;</span> def search():
+<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span>     search = input(&#34;What would you like to know about the NHL? \n For teams type --&gt; Teams&#34;)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span>     if nhl_teams.get(search.lower()) == None:
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>         print(&#34;Invalid Search&#34;)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1075</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1071</span> if not self._allow_stdin:
+<span class="ansi-green-intense-fg ansi-bold">   1072</span>     raise StdinNotImplementedError(
+<span class="ansi-green-intense-fg ansi-bold">   1073</span>         &#34;raw_input was called, but this frontend does not support input requests.&#34;
+<span class="ansi-green-intense-fg ansi-bold">   1074</span>     )
+<span class="ansi-green-fg">-&gt; 1075</span> return self._input_request(
+<span class="ansi-green-intense-fg ansi-bold">   1076</span>     str(prompt),
+<span class="ansi-green-intense-fg ansi-bold">   1077</span>     self._parent_ident[&#34;shell&#34;],
+<span class="ansi-green-intense-fg ansi-bold">   1078</span>     self.get_parent(&#34;shell&#34;),
+<span class="ansi-green-intense-fg ansi-bold">   1079</span>     password=False,
+<span class="ansi-green-intense-fg ansi-bold">   1080</span> )
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1120</span>, in <span class="ansi-cyan-fg">Kernel._input_request</span><span class="ansi-blue-fg">(self, prompt, ident, parent, password)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1117</span>             break
+<span class="ansi-green-intense-fg ansi-bold">   1118</span> except KeyboardInterrupt:
+<span class="ansi-green-intense-fg ansi-bold">   1119</span>     # re-raise KeyboardInterrupt, to truncate traceback
+<span class="ansi-green-fg">-&gt; 1120</span>     raise KeyboardInterrupt(&#34;Interrupted by user&#34;) from None
+<span class="ansi-green-intense-fg ansi-bold">   1121</span> except Exception:
+<span class="ansi-green-intense-fg ansi-bold">   1122</span>     self.log.warning(&#34;Invalid Message:&#34;, exc_info=True)
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: Interrupted by user</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/ahadsblog/2023/03/30/HashMap-Hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ahadsblog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://ahadb63.github.io/ahadsblog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ahadsblog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
