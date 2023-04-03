@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -136,9 +136,9 @@ window.onload = wrap_img;
 
 <span class="n">nhl_teams</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;League&quot;</span><span class="p">:</span> <span class="s2">&quot;NHL&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;North America&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;current season&quot;</span><span class="p">:</span> <span class="s1">&#39;2022-2023&#39;</span><span class="p">,</span>
-    <span class="s2">&quot;teams&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;Country&quot;</span><span class="p">:</span> <span class="s2">&quot;North America&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Current Season&quot;</span><span class="p">:</span> <span class="s1">&#39;2022-2023&#39;</span><span class="p">,</span>
+    <span class="s2">&quot;Teams&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Boston Bruins&quot;</span><span class="p">,</span>
         <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Chicago Blackhawks&quot;</span><span class="p">,</span>
         <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Toronto Maple Leafs&quot;</span><span class="p">,</span>
@@ -162,10 +162,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;League&#39;: &#39;NHL&#39;,
- &#39;country&#39;: &#39;North America&#39;,
- &#39;current season&#39;: &#39;2022-2023&#39;,
- &#39;teams&#39;: {1: &#39;Boston Bruins&#39;,
+<pre>{&#39;Country&#39;: &#39;North America&#39;,
+ &#39;Current Season&#39;: &#39;2022-2023&#39;,
+ &#39;League&#39;: &#39;NHL&#39;,
+ &#39;Teams&#39;: {1: &#39;Boston Bruins&#39;,
            2: &#39;Chicago Blackhawks&#39;,
            3: &#39;Toronto Maple Leafs&#39;,
            4: &#39;Los Angeles Kings&#39;,
@@ -187,7 +187,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;teams&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">nhl_teams</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Teams&#39;</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -321,7 +321,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Original List:  [&#39;David Pastarnak&#39;, &#39;Conner Mcdavid&#39;, &#39;Auston Mattphews&#39;, &#39;David Pastarnak&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;]
-List after removing duplicate elements:  [&#39;Conner Mcdavid&#39;, &#39;Auston Mattphews&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;, &#39;David Pastarnak&#39;]
+List after removing duplicate elements:  [&#39;Auston Mattphews&#39;, &#39;David Pastarnak&#39;, &#39;Linus Ullmark&#39;, &#39;Alex Ovechkin&#39;, &#39;Conner Mcdavid&#39;]
 </pre>
 </div>
 </div>
@@ -339,7 +339,7 @@ List after removing duplicate elements:  [&#39;Conner Mcdavid&#39;, &#39;Auston 
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nhl_teams</span><span class="p">[</span><span class="s2">&quot;teams&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">6</span><span class="p">:</span><span class="s2">&quot;New York Rangers&quot;</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nhl_teams</span><span class="p">[</span><span class="s2">&quot;Teams&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">6</span><span class="p">:</span><span class="s2">&quot;New York Rangers&quot;</span><span class="p">})</span>
 
 <span class="c1"># How would add an additional team </span>
 <span class="c1"># use .update</span>
@@ -359,16 +359,10 @@ List after removing duplicate elements:  [&#39;Conner Mcdavid&#39;, &#39;Auston 
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Best Players&#39;: [&#39;David Pastarnak&#39;,
-                  &#39;Conner Mcdavid&#39;,
-                  &#39;Auston Mattphews&#39;,
-                  &#39;David Pastarnak&#39;,
-                  &#39;Linus Ullmark&#39;,
-                  &#39;Alex Ovechkin&#39;],
+<pre>{&#39;Country&#39;: &#39;North America&#39;,
+ &#39;Current Season&#39;: &#39;2022-2023&#39;,
  &#39;League&#39;: &#39;NHL&#39;,
- &#39;country&#39;: &#39;North America&#39;,
- &#39;current season&#39;: &#39;2022-2023&#39;,
- &#39;teams&#39;: {1: &#39;Boston Bruins&#39;,
+ &#39;Teams&#39;: {1: &#39;Boston Bruins&#39;,
            2: &#39;Chicago Blackhawks&#39;,
            3: &#39;Toronto Maple Leafs&#39;,
            4: &#39;Los Angeles Kings&#39;,
@@ -453,20 +447,289 @@ Best Players: [&#39;David Pastarnak&#39;, &#39;Conner Mcdavid&#39;, &#39;Auston 
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: &#39;Boston Bruins&#39;,
+ 2: &#39;Chicago Blackhawks&#39;,
+ 3: &#39;Toronto Maple Leafs&#39;,
+ 4: &#39;Los Angeles Kings&#39;,
+ 5: &#39;Edmonton Oliers&#39;,
+ 6: &#39;New York Rangers&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define the options as a list</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">nhl_teams</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="n">options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+
+<span class="c1"># Define the menu function</span>
+<span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
+    <span class="c1"># Display the menu options</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Select an option from the list below:&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+
+    <span class="c1"># user input</span>
+    <span class="n">search</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to know about ...&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="c1"># Find the selected option in the options list</span>
+    <span class="n">selected_option</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">option</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">search</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">):</span>
+            <span class="n">selected_option</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">option</span><span class="p">)</span>
+            <span class="k">break</span>
+    
+
+    <span class="k">if</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">&quot;Teams&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Teams: </span><span class="si">{</span><span class="n">nhl_teams</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">&quot;League&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> League: </span><span class="si">{</span><span class="n">nhl_teams</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">&quot;Country&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Country: </span><span class="si">{</span><span class="n">nhl_teams</span><span class="p">[</span><span class="n">options</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">selected_option</span> <span class="o">==</span> <span class="s2">&quot;Teams&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Teams(s):&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">nhl_teams</span><span class="p">[</span><span class="s1">&#39;Teams&#39;</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Please try again. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Repeat the menu</span>
+    <span class="n">menu</span><span class="p">()</span>
+
+<span class="n">menu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+
+ Please try again. 
+
+
+ Select an option from the list below:
+league
+country
+current season
+teams
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 9&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     else:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         pprint.pprint(nhl_teams.get(search.lower()))
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> search()
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 44&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=40&#39;&gt;41&lt;/a&gt;</span>     # Repeat the menu
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=41&#39;&gt;42&lt;/a&gt;</span>     menu()
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=43&#39;&gt;44&lt;/a&gt;</span> menu()
 
-<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt;</span> def search():
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span>     search = input(&#34;What would you like to know about the NHL? \n For teams type --&gt; Teams&#34;)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span>     if nhl_teams.get(search.lower()) == None:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X14sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span>         print(&#34;Invalid Search&#34;)
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">menu</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=38&#39;&gt;39&lt;/a&gt;</span>     print(&#34;\n Please try again. \n&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=40&#39;&gt;41&lt;/a&gt;</span> # Repeat the menu
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=41&#39;&gt;42&lt;/a&gt;</span> menu()
+
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">menu</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=38&#39;&gt;39&lt;/a&gt;</span>     print(&#34;\n Please try again. \n&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=40&#39;&gt;41&lt;/a&gt;</span> # Repeat the menu
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=41&#39;&gt;42&lt;/a&gt;</span> menu()
+
+    <span class="ansi-red-fg">[... skipping similar frames: menu at line 42 (15 times)]</span>
+
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">menu</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=38&#39;&gt;39&lt;/a&gt;</span>     print(&#34;\n Please try again. \n&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=40&#39;&gt;41&lt;/a&gt;</span> # Repeat the menu
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=41&#39;&gt;42&lt;/a&gt;</span> menu()
+
+<span class="ansi-green-intense-fg ansi-bold">/vscode/ahadsblog/_notebooks/2023-03-30-HashMap Hacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">menu</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span>     print(option)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=16&#39;&gt;17&lt;/a&gt;</span> # user input
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=17&#39;&gt;18&lt;/a&gt;</span> search = input(&#34;What would you like to know about ...&#34;).lower()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span> # Find the selected option in the options list
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/vscode/ahadsblog/_notebooks/2023-03-30-HashMap%20Hacks.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span> selected_option = None
 
 File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1075</span>, in <span class="ansi-cyan-fg">Kernel.raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
 <span class="ansi-green-intense-fg ansi-bold">   1071</span> if not self._allow_stdin:
@@ -498,6 +761,19 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/ipykern
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="inforgraphic">inforgraphic<a class="anchor-link" href="#inforgraphic"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/ahadsblog/images/copied_from_nb/info.png" alt="" /></p>
+
+</div>
+</div>
+</div>
 </div>
 
 
