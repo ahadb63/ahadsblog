@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -398,10 +398,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="d6977a66-afe6-4fcf-976c-0410dd79d74d"></div>
+<div id="12a61ae1-4d5f-44f9-8784-dc9a14b25bfe"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#d6977a66-afe6-4fcf-976c-0410dd79d74d');
+var element = $('#12a61ae1-4d5f-44f9-8784-dc9a14b25bfe');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -773,10 +773,10 @@ element.append(arr2D);
 <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">ship1</span><span class="p">()</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
 <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ship2</span><span class="p">()</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span>
 <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ship3</span><span class="p">()</span>
 <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
@@ -924,6 +924,150 @@ element.append(arr2D);
                                                            \____/  
 </span><span class="ansi-blue-fg">----------------------------------------------------------------</span>
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span> 
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>  
+
+
+<span class="c1"># ANSI Color Codes</span>
+<span class="n">ICE_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">"</span><span class="se">\u001B</span><span class="s2">[36m</span><span class="se">\u001B</span><span class="s2">[2D"</span> <span class="c1"># Light blue to represent the ice</span>
+<span class="n">PUCK_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">"</span><span class="se">\u001B</span><span class="s2">[30m</span><span class="se">\u001B</span><span class="s2">[2D"</span> <span class="c1"># Black to represent the puck</span>
+<span class="n">RESET_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">"</span><span class="se">\u001B</span><span class="s2">[0m</span><span class="se">\u001B</span><span class="s2">[2D"</span>
+
+<span class="k">def</span> <span class="nf">puck_print</span><span class="p">(</span><span class="n">position</span><span class="p">):</span>  
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">RESET_COLOR</span><span class="p">)</span>
+    
+    <span class="n">sp</span> <span class="o">=</span> <span class="s2">" "</span> <span class="o">*</span> <span class="n">position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"  ______  "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">" /      </span><span class="se">\\</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">PUCK_COLOR</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">"|        |"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">" </span><span class="se">\\</span><span class="s2">______/ "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ICE_COLOR</span> <span class="o">+</span> <span class="s2">"--"</span><span class="o">*</span><span class="mi">32</span> <span class="o">+</span> <span class="n">RESET_COLOR</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">puck</span><span class="p">():</span>  
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>  
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">60</span>  
+    <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>  
+
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="n">puck_print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>  
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+
+        
+<span class="n">puck</span><span class="p">()</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+                                                            ______  
+                                                           /      \ 
+<span class="ansi-black-fg">                                                          |        |
+                                                           \______/ 
+</span><span class="ansi-cyan-fg">----------------------------------------------------------------</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span> <span class="c1"># used for delay</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>  <span class="c1"># jupyter specific clear</span>
+
+<span class="c1"># ANSI Color Codes</span>
+<span class="n">ICE_COLOR</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\u001b</span><span class="s2">[36m"</span>
+<span class="n">PUCK_COLOR</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\u001b</span><span class="s2">[37m"</span>
+
+<span class="k">def</span> <span class="nf">puck1</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"  ______  "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" /      </span><span class="se">\\</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">PUCK_COLOR</span> <span class="o">+</span> <span class="s2">"|        |"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" </span><span class="se">\\</span><span class="s2">______/ "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ICE_COLOR</span> <span class="o">+</span> <span class="s2">"~"</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">puck2</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"    ______  "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"   /      </span><span class="se">\\</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">PUCK_COLOR</span> <span class="o">+</span> <span class="s2">"  |        |"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"   </span><span class="se">\\</span><span class="s2">______/ "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ICE_COLOR</span> <span class="o">+</span> <span class="s2">"~"</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">puckx</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"                                        ______  "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"                                       /      </span><span class="se">\\</span><span class="s2"> "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">PUCK_COLOR</span> <span class="o">+</span> <span class="s2">"                                      |        |"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"                                       </span><span class="se">\\</span><span class="s2">______/ "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ICE_COLOR</span> <span class="o">+</span> <span class="s2">"~"</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+
+
+<span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">puck1</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">puck2</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">3.5</span><span class="p">)</span>
+<span class="c1"># (Repeat for all positions)</span>
+
+<span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">puckx</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                                        ______  
+                                       /      \ 
+<span class="ansi-white-fg">                                      |        |
+                                       \______/ 
+</span><span class="ansi-cyan-fg">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</span></pre>
 </div>
 </div>
 
