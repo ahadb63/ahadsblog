@@ -1,4 +1,9 @@
-
+layout: categories
+permalink: /categories/
+title: TETRIS
+search_exclude: true
+---
+<!DOCTYPE html>
 <html>
 <head>
     <title>NHL Standings Quiz</title>
@@ -14,6 +19,7 @@
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
+
         .quiz-container {
             display: flex;
             flex-direction: column;
@@ -23,6 +29,7 @@
             background-color: #f0f0f0;
             z-index: 1;
         }
+
         .team-button {
             padding: 20px;
             margin: 10px;
@@ -35,9 +42,11 @@
             border-radius: 10px;
             transition: background-color 0.3s ease;
         }
+
         .team-button:hover {
             background-color: #45a049;
         }
+
         .standings-container {
             width: 200px;
             text-align: left;
@@ -45,10 +54,12 @@
             height: calc(100vh - 100px);
             margin-top: 20px;
         }
+
         #feedback {
             color: red;
             font-weight: bold;
         }
+
         h1, h2 {
             text-align: center;
         }
@@ -70,7 +81,7 @@
 </body>
 </html>
 
-<script>
+    <script>
         var standings = [
             'Boston',
             'Carolina',
@@ -154,4 +165,5 @@
 
         loadTeams();
     </script>
-
+</body>
+</html>
